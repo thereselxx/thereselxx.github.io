@@ -1,0 +1,253 @@
+/* Universal Styles */
+html {
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.circular {
+    height: 15.5rem;
+    width: 15.5rem;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.circular.landscape img {
+    height: 100%;
+    width: auto;
+    margin-left: -2rem;
+}
+
+.circular.portrait img {
+    height: auto;
+    width: 100%;
+}
+
+.rectangular {
+    width: 20rem;
+    height: 25rem;
+}
+
+/* Header Styles */
+header {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7.75rem;
+    width: 100%;
+    background-color: #1079F3;
+}
+
+#logo {
+    width: 17.75rem;
+    height: 6.19rem;
+    padding: 0.5rem;
+}
+
+nav {
+    height: 6.19rem;
+    width: 50%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style-type: none;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 2.4rem;
+}
+
+nav ul li a:link {
+    color: white;
+}
+
+nav ul li a:visited {
+    color: aqua;
+}
+
+@media only screen and (max-width: 1025px) {
+    nav ul {
+        font-size: 1.5rem;
+    }
+}
+
+/* Banner */
+.banner {
+    height: 38rem;
+    width: 100%;
+    position: relative;
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    top: -2rem;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: url("/Users/thereselxx/DevProject/flexbox-business-site-starting/resources/img/naja-bertolt-jensen-FxnqdmKBJps-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.banner h1 {
+    position: relative;
+}
+
+.banner #slogan-1 {
+    top: 16.625rem;
+}
+
+.banner #slogan-2 {
+    top: 17.25rem;
+    color: #006FF2;
+    text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* What We Do */
+#wwd-header {
+    display: block;
+    height: auto;
+    width: 100%;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+}
+
+.wwd {
+    height: auto;
+    width: 100%;
+    display: inline-flex;
+    margin-bottom: 2rem;
+}
+
+#boats,
+#microplastic,
+#beach-cleanup {
+    width: 50%;
+    height: auto;
+    padding-bottom: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.wwd h2 {
+    color: #1079F3;
+    width: 50%;
+    height: auto;
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding: .625rem;
+}
+
+@media only screen and (max-width: 1150px) {
+    .wwd {
+        flex-direction: column;
+    }
+
+    #boats,
+    #microplastic,
+    #beach-cleanup {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    #boats,
+    #microplastic {
+        flex-direction: column-reverse;
+    }
+
+    .wwd h2,
+    .wwd img {
+        align-content: center;
+    }
+}
+
+/* Want to Contribute? */
+#contribute {
+    background-color: #1079F3;
+    color: white;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    margin: 0;
+    padding: 1rem;
+}
+
+#product-images {
+    width: 100%;
+    height: 100%;
+    background-color: #1079F3;
+    display: inline-flex;
+    overflow: scroll hidden;
+    margin: 0;
+}
+
+#product-images img {
+    padding: 1.5rem 1.25rem;
+}
+
+#product-description h2 {
+    font-family: 'Kalam', cursive;
+    text-align: center;
+    margin-bottom: -1rem;
+}
+
+/* Team */
+#team {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    padding-top: 2rem; 
+}
+
+.members {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+#member1 .circular.landscape img {
+    margin-left: -4rem;
+}
+
+.members div {
+    margin: 1rem;
+}
+
+.members h2,
+.members h3 {
+    text-align: center;
+}
+
+@media only screen and (max-width: 670px) {
+    .members h2,
+    .members h3 {
+        display: none;
+    }
+}
+
+.footer {
+    width: 100%;
+    height: auto;
+    padding: .5rem;
+    background-color: #1079F3;
+}
+
+.footer h5 {
+    color: white;
+}
+
+.footer #contact {
+    text-align: center;
+}
